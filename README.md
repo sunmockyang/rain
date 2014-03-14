@@ -22,9 +22,9 @@ debugMode = true
 The slow dripping/falling behaviour of the rain drops was modelled using perlin noise for a more natural falling rather than using a random function. The library used is here: https://gist.github.com/banksean/304522
 
 ## Image sources
-abandoned.jpg - http://wallbase.cc/wallpaper/261189
-city.jpg - http://wallbase.cc/wallpaper/678563
-danbo.jpg - http://wallbase.cc/wallpaper/747497
-japan.jpg - http://wallbase.cc/wallpaper/788560
-japan2.jpg - http://wallbase.cc/wallpaper/2830319
-skyline.jpg - http://wallbase.cc/wallpaper/541166
+- abandoned.jpg - http://wallbase.cc/wallpaper/261189
+- city.jpg - http://wallbase.cc/wallpaper/678563
+- danbo.jpg - http://wallbase.cc/wallpaper/747497
+- japan.jpg - http://wallbase.cc/wallpaper/788560
+- japan2.jpg - http://wallbase.cc/wallpaper/2830319
+- skyline.jpg - http://wallbase.cc/wallpaper/541166
