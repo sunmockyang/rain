@@ -163,7 +163,6 @@ RainDrop.prototype.getImageColor = function(x, y, amount){
 	var data = this.bgCtx.getImageData(Math.floor(x/5), Math.floor(y/5), 1, 1).data;
 
 	if(debugMode){
-		console.log(debugMode);
 		this.context.fillStyle = "#F00";
 		this.context.fillRect(Math.floor(x/5),Math.floor(y/5), 1,1);
 	}
