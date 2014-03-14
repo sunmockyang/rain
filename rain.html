@@ -1,0 +1,90 @@
+<html>
+
+<head>
+	<style>
+		body{
+			margin: 0;
+		}
+		
+		canvas{
+			top:0px;
+			z-index: 1;
+		}
+		
+		a{
+			font-family: Arial;
+			font-size: 12px;
+			text-decoration: none;
+			color: #FFF;
+			right: 10px;
+			position: absolute;
+			bottom: 10px;
+		}
+		
+		div{
+			font-family: Arial;
+			font-size: 12px;
+			text-decoration: none;
+			color: #FFF;
+			left: 10px;
+			position: absolute;
+			bottom: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div>Press any key to toggle the shape.</div>
+	<a href="http://sunmock.com">Sunmock Yang, Sep. 2013</a>
+	<canvas id="canvas" style="margin: 0; border: solid grey 2px" width="600px" height="600px">
+		YOUR BROWSER IS TOO POOR
+	</canvas>
+	<script>
+		var canvas, context;
+		var rainer, noise;
+		function main(){
+			canvas = document.getElementById("canvas");
+			context = canvas.getContext("2d");
+
+			RainDrop.prototype.context = context;
+			RainDrop.prototype.canvas = canvas;
+			
+			noise = new SimplexNoise();
+
+			rainer = new Rainer();
+			//asdf = new RainDrop();
+			var bgName = randomImg();
+			
+			rainer.background.onload = function(){
+				rainer.start();
+			};
+			rainer.background.src = bgName + ".jpg";
+			
+			resize();
+		}
+		
+		window.onload = main;
+		window.onresize = resize;
+
+		document.onkeydown = function(){
+			rainer.shape = (rainer.shape == "circle") ? "square" : "circle";
+		}
+		
+		function resize(){
+			canvas.width = window.innerWidth - 5;
+			canvas.height = window.innerHeight - 5;
+			rainer.resize();
+		}
+		
+		function randomImg(){
+			var arr = ["skyline", "japan", "japan2", "city", "danbo", "abandoned", "lake"];
+			
+			return arr[Math.floor(Math.random() * arr.length)];
+		}
+	</script>
+	
+	<script src="rain.js"></script>
+	<script src="perlin-noise-simplex.js"></script>
+</body>
+
+</html>
