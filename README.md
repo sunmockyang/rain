@@ -14,6 +14,8 @@ context.getImageData(x, y, 1, 1).data
 
 This function is rather slow however is the only way to get RGB data of an image. So to optimize, the image is redrawn in an offscreen canvas in a much reduced size and the data is pulled from this image.
 
+Also for optimization, the entire image is not redrawn after each frame, but rather only the areas in which the shapes used to be are redrawn from the previous image (didn't really make a difference though).
+
 Open up console and enter in the following to see the smaller image and the location of each particle.
 ```javascript
 debugMode = true
